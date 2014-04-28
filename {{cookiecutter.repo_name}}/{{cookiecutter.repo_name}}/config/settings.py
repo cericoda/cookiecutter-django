@@ -49,6 +49,7 @@ class Common(Configuration):
         'crispy_forms',  # Form layouts
         'avatar',  # for user avatars
         'floppyforms', # HTML5 forms
+        'reversion',
     )
 
     # Apps specific for this project go here.
@@ -77,6 +78,8 @@ class Common(Configuration):
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'reversion.middleware.RevisionMiddleware',
+
     )
     ########## END MIDDLEWARE CONFIGURATION
 
